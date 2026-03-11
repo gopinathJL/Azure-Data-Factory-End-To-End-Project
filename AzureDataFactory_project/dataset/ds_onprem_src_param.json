@@ -1,0 +1,32 @@
+{
+	"name": "ds_onprem_src_param",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_OnPrem_file",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pl_file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": {
+					"value": "@dataset().pl_file_name",
+					"type": "Expression"
+				},
+				"folderPath": "ADF Projects_ds"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
