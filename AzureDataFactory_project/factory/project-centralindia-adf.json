@@ -1,5 +1,11 @@
 {
 	"name": "project-centralindia-adf",
+	"properties": {
+		"globalConfigurations": {
+			"factoryStagingLSReferenceName": "ls_adls_data",
+			"factoryStagingLSType": "LinkedServiceReference"
+		}
+	},
 	"location": "centralindia",
 	"identity": {
 		"type": "SystemAssigned",
